@@ -1,14 +1,14 @@
-var countdownGenerator = function (x) {
-  var count = 0; 
+var countdownGenerator = function (x) {  
+  var x = x + 1;
   var blastoff = '';
 
 
   return function() {
-  	if (count < 3) {
-  		count += 1;
-  		return "T-minus " + count + "..."
+  	if (x > 1) {
+  		x -= 1;
+  		return "T-minus " + x  + "..."
   	} else {
-  		if (blastoff == '') {
+  		if (blastoff === '') {
   			blastoff += "Blast Off!"
   		return blastoff;
   	} else {
