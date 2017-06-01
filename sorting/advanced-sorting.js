@@ -3,6 +3,8 @@ var students = [
   { id: 2, name: "zoidberg", age: 22 },
   { id: 3, name: "alex",     age: 22 },
   { id: 4, name: "alex",     age: 30 }
+  
+  
 ];
 
 // a function that sorts that sorts students 
@@ -22,7 +24,9 @@ var studentSorted = students.sort(function (a, b) {
     return 1;
   }
   // names must be equal
-  return 0;
+  if (a.name === b.name) {
+  	return b.age - a.age;
+  }
 });
 
 console.log(studentSorted);
